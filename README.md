@@ -12,7 +12,7 @@ This project is a Telegram bot that predicts car prices based on a trained machi
 
 ---
 
-🧠 ML Model Logic
+## 🧠 ML Model Logic
 
 The car price prediction model is trained on real-world car listing data. It uses the following features:
 
