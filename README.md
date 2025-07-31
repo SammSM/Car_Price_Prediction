@@ -30,4 +30,5 @@ It includes:
 
 After starting the bot with `/start`, send a message like this:
 mercedes-benz, 2018, petrol, 45000 km, left, black, sedan, excellent, 2.0
-![Alt Text](car_price.jpg)
+
+![Alt Text](car_price.JPG)
