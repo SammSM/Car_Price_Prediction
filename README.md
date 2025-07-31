@@ -12,17 +12,29 @@ This project is a Telegram bot that predicts car prices based on a trained machi
 
 ---
 
-## 🧠 How the ML Model Works
+🧠 ML Model Logic
+The car price prediction model is trained on real-world car listing data. It uses the following features:
 
-The model is trained on real car listing data with features like:
+model, year, motor_type, running, color, type, status, motor_volume
 
-- `model`, `year`, `motor_type`, `running`, `color`, `type`, `status`, `motor_volume`
+Workflow:
+1. Preprocessing:
 
-It includes:
+- Categorical features are encoded using LabelEncoder
+- The encoders for each feature are saved as .pkl files (e.g., label_model.pkl, label_color.pkl) in the model_files/ directory
+- Mileage values like "km" or "miles" are converted to a numeric format (with miles converted to kilometers using a coefficient)
+- Features are scaled using StandardScaler, which is also saved as scaler.pkl
 
-- Preprocessing with `LabelEncoder` and `StandardScaler`
-- Keras-based neural network saved as `.pkl` (via `pickle`)
-- Inference-ready pipeline used in real-time inside the bot
+2. Model Architecture:
+
+- A deep neural network built with Keras
+- The output layer uses a linear activation function to perform regression
+
+3. Deployment:
+
+- The trained model is stored as model2.pkl using pickle
+- Encoders and scaler are loaded at runtime to ensure input data matches the training format
+- The Telegram bot feeds user input through the same preprocessing pipeline before making a prediction
 
 ---
 
