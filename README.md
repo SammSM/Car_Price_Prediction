@@ -97,7 +97,7 @@ pip install -r requirements.txt
 - Enter /start in BotFather and follow the instruction
 
 - Paste the generated token in bot.py
-![alt text]()
+![alt text](bot_token.JPG)
 
 ## 8. Run auto_bot.py
 ```bash
